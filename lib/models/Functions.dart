@@ -40,77 +40,6 @@ Widget buildQuizContainer(BuildContext context, String text, Color color) {
   );
 }
 
-Widget buildProfileNotifications(BuildContext context) {
-  final height = MediaQuery.of(context).size.height;
-  final width = MediaQuery.of(context).size.width;
-
-  return Container(
-    height: height * 0.05,
-    width: width * 0.35,
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.black.withOpacity(0.1),
-          blurRadius: 5,
-          offset: const Offset(0, 3),
-        ),
-      ],
-    ),
-    child: Padding(
-      padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          // Butonul "Off"
-          Container(
-            height: height * 0.03,
-            width: width * 0.15,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: const Color(0xffF43135),
-              border:
-                  Border.all(color: Colors.black.withOpacity(0.2), width: 1),
-            ),
-            child: const Text(
-              "Off",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontFamily: "Karma",
-              ),
-            ),
-          ),
-          // Butonul "On"
-          Container(
-            height: height * 0.03,
-            width: width * 0.15,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: const Color(0xff8EBB64),
-              border:
-                  Border.all(color: Colors.black.withOpacity(0.2), width: 1),
-            ),
-            child: const Text(
-              "On",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontFamily: "Karma",
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-
 Widget buildQuizImage(BuildContext context, ImageProvider image) {
   final height = MediaQuery.of(context).size.height;
   final width = MediaQuery.of(context).size.width;
@@ -254,7 +183,6 @@ Widget buildProfileEditbuton(BuildContext context) {
 }
 
 Widget buildback(BuildContext context, VoidCallback onTap) {
-  final height = MediaQuery.of(context).size.height;
   return GestureDetector(
     onTap: () {
       onTap();

@@ -24,7 +24,6 @@ class _AddPersonalitiesState extends State<AddPersonalities> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Positioned.fill(
@@ -181,8 +180,9 @@ class _AddPersonalitiesState extends State<AddPersonalities> {
                             padding: const EdgeInsets.all(12.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16),
-                              color: Colors.brown[100],
-                              border: Border.all(color: Colors.brown, width: 2),
+                              color: Color(0xff1D1616),
+                              border: Border.all(
+                                  color: Color(0xff8E1616), width: 2),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -199,8 +199,10 @@ class _AddPersonalitiesState extends State<AddPersonalities> {
                                 Text(
                                   selectedPersonality!['name'],
                                   style: const TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
+                                    color: Color(0xff8E1616),
+                                    fontFamily: "Karma",
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -209,16 +211,10 @@ class _AddPersonalitiesState extends State<AddPersonalities> {
                                   style: const TextStyle(
                                     fontSize: 14,
                                     fontStyle: FontStyle.italic,
+                                    color: Colors.white,
                                   ),
                                 ),
                                 const SizedBox(height: 6),
-                                Text(
-                                  "Cost: ${selectedPersonality!['cost']}",
-                                  style: const TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.grey,
-                                  ),
-                                ),
                                 const SizedBox(height: 10),
                                 ElevatedButton(
                                   onPressed: () {
@@ -229,9 +225,15 @@ class _AddPersonalitiesState extends State<AddPersonalities> {
                                     });
                                   },
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.brown,
+                                    backgroundColor: Color(0xff8E1616),
                                   ),
-                                  child: const Text("Close"),
+                                  child: const Text(
+                                    "Close",
+                                    style: TextStyle(
+                                        fontFamily: "Karma",
+                                        fontSize: 18,
+                                        color: Color(0xffEEEEEE)),
+                                  ),
                                 ),
                               ],
                             ),
