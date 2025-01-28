@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>We require access to your photo library to enable image selection for customizing your profile or adding images to your content.</string>
+    <string>We require access to your photo library to enable image selection for customizing your profile.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
